@@ -85,4 +85,4 @@ local.properties
 #js
 node_modules/
 #package-lock.json
-
+*.pdf

@@ -5,11 +5,11 @@
 	"language": "zh-hans",
 	"gitbook": "3.2.3",
 	"styles": {
-		"website": "book.css"
-	},
-	"structure": {
-		"readme": "README.md",
-		"summary": "SUMMARY.md"
+    "website": "book.css",
+    "ebook": "book-pdf.css",
+    "pdf": "book-pdf.css",
+    "mobi": "book-pdf.css",
+    "epub": "book-pdf.css"
 	},
 	"links": {
 		"gitbook": false,
@@ -21,23 +21,46 @@
 		}
 	},
 	"plugins": [
-		"sharing",
+    "-sharing",
+    "-lunr",
+    "-search",
+    "advance-blockquote",
 		"search-plus",
-		"-navigator",
-		"prism",
-		"prism-themes",
-		"advanced-emoji",
-		"anchors",
-		"ace",
-		"emphasize",
-		"katex",
-		"splitter",
-		"chapter-fold",
-		"expandable-chapters-small",
-		"code",
-		"sectionx"
+    "navigator",
+    "prism",
+    "prism-themes",
+    "anchors",
+    "ace",
+    "emphasize",
+    "katex",
+    "splitter",
+    "chapter-fold",
+    "expandable-chapters-small",
+    "code",
+    "include-codeblock"
 	],
 	"pluginsConfig": {
+    "asciidoc-include": {
+      "syntax": "asciidoc"
+    },
+    "flexible-alerts": {
+      "style": "flat"
+    },
+    "advance-blockquote": {
+      "style": "callout",
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+    },
+    "include-codeblock": {
+    },
+    "icp": {
+      "label": "",
+      "number": "&copy; 晋ICP备19000131号",
+      "link": "http://www.beian.miit.gov.cn/"
+    },
 		"theme-default": {
 			"showLevel": true
 		},
