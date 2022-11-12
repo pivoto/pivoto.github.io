@@ -1,31 +1,31 @@
 {
-	"title": "学习笔记与知识库",
-	"author": "Qt",
-	"description": "",
-	"language": "zh-hans",
-	"gitbook": "3.2.3",
-	"styles": {
+  "title": "学习笔记与知识库",
+  "author": "Qt",
+  "description": "",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "styles": {
     "website": "book.css",
     "ebook": "book-pdf.css",
     "pdf": "book-pdf.css",
     "mobi": "book-pdf.css",
     "epub": "book-pdf.css"
-	},
-	"links": {
-		"gitbook": false,
-		"sharing": {
-			"google": false,
-			"facebook": false,
-			"twitter": false,
-			"all": false
-		}
-	},
-	"plugins": [
+  },
+  "links": {
+    "gitbook": false,
+    "sharing": {
+      "google": false,
+      "facebook": false,
+      "twitter": false,
+      "all": false
+    }
+  },
+  "plugins": [
     "-sharing",
     "-lunr",
     "-search",
     "advance-blockquote",
-		"search-plus",
+    "search-plus",
     "navigator",
     "prism",
     "prism-themes",
@@ -38,8 +38,8 @@
     "expandable-chapters-small",
     "code",
     "include-codeblock"
-	],
-	"pluginsConfig": {
+  ],
+  "pluginsConfig": {
     "asciidoc-include": {
       "syntax": "asciidoc"
     },
@@ -61,22 +61,22 @@
       "number": "&copy; 晋ICP备19000131号",
       "link": "http://www.beian.miit.gov.cn/"
     },
-		"theme-default": {
-			"showLevel": true
-		},
-		"prism": {
-			"css": [
-				"prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
-			]
-		},
-		"sectionx": {
-			"tag": "b"
-		}
-	},
-	"pdf": {
-		"toc": true,
-		"pageNumbers": true,
-		"fontSize": 16,
-		"paperSize": "a4"
-	}
+    "theme-default": {
+      "showLevel": true
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+      ]
+    },
+    "sectionx": {
+      "tag": "b"
+    }
+  },
+  "pdf": {
+    "toc": true,
+    "pageNumbers": true,
+    "fontSize": 16,
+    "paperSize": "a4"
+  }
 }
