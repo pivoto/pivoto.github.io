@@ -29,7 +29,7 @@
 
 ---
 
-* [Test](test/README.md)
+* [测试插件使用](test/README.md)
 
 
 ---

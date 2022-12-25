@@ -34,4 +34,4 @@
 > test `!!!!|style:flat|label:test`
 
 
-[import](../book.css)
+[book.css](../book.css ':include')

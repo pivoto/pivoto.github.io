@@ -37,7 +37,7 @@
     "chapter-fold",
     "expandable-chapters-small",
     "code",
-    "include-codeblock"
+    "embed-file"
   ],
   "pluginsConfig": {
     "asciidoc-include": {
@@ -54,7 +54,7 @@
         "className": "info"
       }
     },
-    "include-codeblock": {
+    "embed-file": {
     },
     "icp": {
       "label": "",
