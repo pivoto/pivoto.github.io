@@ -1,0 +1,80 @@
+# see https://docs.github.com/zh/actions/quickstart
+# see https://docs.github.com/zh/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
+name: Deploy GitHub Pages
+# 触发条件：在 push 到 master 分支后
+on:
+  push:
+    branches:
+      - master
+
+permissions: write-all
+
+# 任务
+jobs:
+  # build
+  build:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # see https://github.com/actions/setup-node
+      # see https://github.com/marketplace/actions/set-up-node-using-nvm
+      - name: npm-setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 10.14.2
+
+      # 生成静态文件
+      - name: gitbook-build
+        run: |
+          npm install -g gitbook-cli
+          chmod +x build-all.sh
+          sh build-all.sh
+
+
+      # 发布到 gh-pages 分支
+      - name: push-gh-pages
+        run: |
+          git config user.email KylinMania@163.com
+          git config user.name blizzardy
+          git config core.ignorecase false
+
+          git checkout --orphan gh-pages
+          if [ -d _book ]; then
+            git add -f _book
+          fi
+          echo "node_modules/" > .gitignore
+          git add -A
+          git commit --no-verify --allow-empty -m "publish gh-pages"
+          git remote rm origin
+          git remote add origin https://x-access-token:${{secrets.ACCESS_TOKEN}}@github.com/pivoto/pivoto.github.io.git
+          git push -f origin gh-pages
+
+      # see https://github.com/ad-m/github-push-action
+      # 强推分支
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{secrets.GITHUB_TOKEN}}
+#          branch: gh-pages
+#          force: true
+
+      # see https://github.com/JamesIves/github-pages-deploy-action
+      # 发布文档分支
+#      - name: deploy-gh-pages
+#        uses: JamesIves/github-pages-deploy-action@v4.2.2
+#        with:
+#          branch: gh-pages
+#          folder: .
+
+
+#  # deploy
+#  deploy:
+#    needs: build
+
