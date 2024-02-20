@@ -20,7 +20,7 @@ for sub_dir in "${sub_dirs[@]}" ;do
 
 	cp -rf node_modules ${sub_dir}/
 	cd ${sub_dir}
-	gitbook build
+	gitbook pdf
 	rm -rf node_modules
 
 	cd ${cur_dir}

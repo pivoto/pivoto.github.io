@@ -35,7 +35,7 @@ jobs:
         run: |
           npm install -g gitbook-cli
           chmod +x build-all.sh
-          sh build-all.sh
+          ./build-all.sh
 
 
       # 发布到 gh-pages 分支
@@ -49,11 +49,11 @@ jobs:
           if [ -d _book ]; then
             git add -f _book
           fi
-          echo "node_modules/" > .gitignore
+          find . -name "_book" -type d | xargs git add -f
           git add -A
           git commit --no-verify --allow-empty -m "publish gh-pages"
           git remote rm origin
-          git remote add origin https://x-access-token:${{secrets.ACCESS_TOKEN}}@github.com/pivoto/pivoto.github.io.git
+          git remote add origin https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/pivoto/pivoto.github.io.git
           git push -f origin gh-pages
 
       # see https://github.com/ad-m/github-push-action
