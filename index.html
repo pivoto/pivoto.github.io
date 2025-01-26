@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="static/cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
 	<link rel="stylesheet" href="static/cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
 	<link rel="stylesheet" href="static/cdn.jsdelivr.net/npm/docsify-jx-toc/dist/jx-toc.css">
+	<link rel="stylesheet" href="static/cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
 	<script src="static/cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
 	<style>
 		a.demo-theme-preview:hover {
@@ -37,6 +39,23 @@
 	</style>
 </head>
 <body>
+<nav class="app-nav no-badge">
+	<ul>
+		<li>全文索引
+			<ul>
+				<li><a class="demo-search-clear" title="清理">清理</a></li>
+			</ul>
+		</li>
+		<li>主题切换
+			<ul>
+				<li><a class="demo-theme-preview" data-theme="vue" title="vue">vue</a></li>
+				<li><a class="demo-theme-preview" data-theme="buble" title="buble">buble</a></li>
+				<li><a class="demo-theme-preview" data-theme="dark" title="dark">dark</a></li>
+				<li><a class="demo-theme-preview" data-theme="pure" title="pure">pure</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
 <div id="app">Loading ...</div>
 <div class="beiAn">
 	<p>
@@ -57,6 +76,7 @@
 		autoHeader: true,
 		executeScript: true,
 		mergeNavbar: true,
+		sidebarDisplayLevel: 6,
 		maxLevel: 6,
 		subMaxLevel: 0,
 		//别名
@@ -138,11 +158,29 @@
 			}
 		},
 		formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
-		plugins: [function (hook, vm) {
-			hook.beforeEach(function (html) {
-				return html + '\n----\n' + 'Last modified {docsify-updated} '
-			})
-		}],
+		plugins: [
+			function (hook, vm) {
+				hook.beforeEach(function (html) {
+					return html + '\n----\n' + 'Last modified {docsify-updated} '
+				})
+			},
+			function (hook, vm) {
+				hook.beforeEach(function (html) {
+					if (/githubusercontent\.com/.test(vm.route.file)) {
+						url = vm.route.file
+							.replace('raw.githubusercontent.com', 'github.com')
+							.replace(/\/master/, '/blob/master')
+					} else {
+						url = 'https://github.com/docsifyjs/docsify/blob/master/docs/' + vm.route.file
+					}
+					var editHtml = '[:memo: Edit Document](' + url + ')\n'
+
+					// return editHtml + html
+					//+ '\n\n----\n\n'
+					//+ '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+				})
+			}
+		],
 		name: '',
 		repo: '',
 		autoHeaders: {
@@ -245,6 +283,7 @@
 <script src="static/unpkg.com/docsify-plugin-advance-blockquote/dist/index.min.js"></script>
 <script src="static/unpkg.com/@markbattistella/docsify-autoheaders/docsify-autoHeaders.js"></script>
 <script src="static/cdn.jsdelivr.net/npm/docsify-jx-toc/dist/jx-toc.js"></script>
+<script src="static/cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js"></script>
 
 </body>
 </html>
