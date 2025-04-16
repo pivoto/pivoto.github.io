@@ -5,7 +5,7 @@ docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将�
 这是一个嵌入 Markdown 文件的例子。
 
 ```markdown
-[filename](../_media/example.md ':include')
+[filename](_media/example.md ':include')
 ```
 
 `example.md` 文件的内容将会直接显示在这里
@@ -24,14 +24,14 @@ docsify 4.6 开始支持嵌入任何类型的文件到文档里。你可以将�
 
 当然，你也可以强制设置嵌入类型。例如你想将 Markdown 文件当作一个 `code block` 嵌入。
 ```markdown
-[filename](../_media/example.md ':include :type=code')
+[filename](_media/example.md ':include :type=code')
 ```
 
 ## 嵌入代码片段
 有时候你并不想嵌入整个文件，可能你只想要其中的几行代码，但你还要在 CI 系统中编译和测试该文件。
 
 ```markdown
-[filename](../_media/example.js ':include :type=code :fragment=demo')
+[filename](_media/example.js ':include :type=code :fragment=demo')
 ```
 
 在你的代码文件中，你需要用斜线 `/// [demo]` 包裹该片段（片段的前后都要有）。
