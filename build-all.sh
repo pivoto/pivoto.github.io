@@ -9,6 +9,8 @@ npm i gitbook-plugin-advance-blockquote
 npm i gitbook-plugin-embed-file
 gitbook install
 
+gitbook build
+
 for sub_dir in "${sub_dirs[@]}" ;do
 	cp ${cur_dir}/.bookignore ${sub_dir}/.bookignore
 	cp ${cur_dir}/book.css ${sub_dir}/book.css
