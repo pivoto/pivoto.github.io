@@ -5,10 +5,12 @@ sub_dirs=(
 	docs
 )
 
+# 取消 set -e 的设置
+set +e
+
 npm i gitbook-plugin-advance-blockquote
 npm i gitbook-plugin-embed-file
 gitbook install
-
 gitbook build
 
 for sub_dir in "${sub_dirs[@]}" ;do
@@ -35,3 +37,5 @@ for sub_dir in "${sub_dirs[@]}" ;do
 	rm ${sub_dir}/package-lock.json
 done;
 
+# 再次设置 set -e
+set -e
