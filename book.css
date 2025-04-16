@@ -1,0 +1,6 @@
+.book-summary ul.summary li.header {
+    text-transform: none;
+}
+.gitbook-link {
+    display: none !important;
+}

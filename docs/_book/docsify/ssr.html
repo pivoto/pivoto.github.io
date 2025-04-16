@@ -1,0 +1,694 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>服务端渲染 (SSR) · 学习笔记与知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Qt">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advance-blockquote/index.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../book.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="embed-files.html" />
+    
+    
+    <link rel="prev" href="pwa.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Docsify使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="quickstart.html">
+            
+                <a href="quickstart.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="more-pages.html">
+            
+                <a href="more-pages.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    多页文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="custom-navbar.html">
+            
+                <a href="custom-navbar.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    定制导航栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="cover.html">
+            
+                <a href="cover.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="themes.html">
+            
+                <a href="themes.html">
+            
+                    
+                        <b>2.1.6.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                        <b>2.1.7.</b>
+                    
+                    插件列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="write-a-plugin.html">
+            
+                <a href="write-a-plugin.html">
+            
+                    
+                        <b>2.1.8.</b>
+                    
+                    开发插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="markdown.html">
+            
+                <a href="markdown.html">
+            
+                    
+                        <b>2.1.9.</b>
+                    
+                    Markdown 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="language-highlight.html">
+            
+                <a href="language-highlight.html">
+            
+                    
+                        <b>2.1.10.</b>
+                    
+                    代码高亮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="deploy.html">
+            
+                <a href="deploy.html">
+            
+                    
+                        <b>2.1.11.</b>
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                        <b>2.1.12.</b>
+                    
+                    文档助手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="cdn.html">
+            
+                <a href="cdn.html">
+            
+                    
+                        <b>2.1.13.</b>
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="pwa.html">
+            
+                <a href="pwa.html">
+            
+                    
+                        <b>2.1.14.</b>
+                    
+                    离线模式(PWA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.15" data-path="ssr.html">
+            
+                <a href="ssr.html">
+            
+                    
+                        <b>2.1.15.</b>
+                    
+                    服务端渲染 (SSR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="embed-files.html">
+            
+                <a href="embed-files.html">
+            
+                    
+                        <b>2.1.16.</b>
+                    
+                    文件嵌入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" >
+            
+                <a target="_blank" href="https://github.com/docsifyjs/awesome-docsify">
+            
+                    
+                        <b>2.1.17.</b>
+                    
+                    Awesome docsify
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    测试插件使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >服务端渲染 (SSR)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;"><b>2.1.15. </b>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;SSR&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;-ssr"><b>2.1.15.1. </b>&#x4EC0;&#x4E48;&#x662F; SSR?</a></li><li><span class="title-icon "></span><a href="#&#x5FEB;&#x901F;&#x5F00;&#x59CB;"><b>2.1.15.2. </b>&#x5FEB;&#x901F;&#x5F00;&#x59CB;</a></li><li><span class="title-icon "></span><a href="#&#x5B9A;&#x5236;&#x6A21;&#x677F;"><b>2.1.15.3. </b>&#x5B9A;&#x5236;&#x6A21;&#x677F;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b>2.1.15.4. </b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x591A;&#x73A9;&#x6CD5;"><b>2.1.15.5. </b>&#x66F4;&#x591A;&#x73A9;&#x6CD5;</a></li></ul></ul></div><a href="#&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;"><a name="&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;" class="plugin-anchor" href="#&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;ssr&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15. &#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;SSR&#xFF09;</h1>
+<p>&#x5148;&#x770B;&#x4F8B;&#x5B50; <a href="https://docsify.now.sh" target="_blank">https://docsify.now.sh</a></p>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#x5728; <a href="https://github.com/docsifyjs/docsify-ssr-demo" target="_blank">https://github.com/docsifyjs/docsify-ssr-demo</a></p>
+<p><img src="https://dn-mhke0kuv.qbox.me/2bfef08c592706108055.png" alt=""></p>
+<p>&#x6587;&#x6863;&#x4F9D;&#x65E7;&#x662F;&#x90E8;&#x7F72;&#x5728; GitHub Pages &#x4E0A;&#xFF0C;Node &#x670D;&#x52A1;&#x90E8;&#x7F72;&#x5728; now.sh &#x91CC;&#xFF0C;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x4ECE; GitHub Pages &#x4E0A;&#x540C;&#x6B65;&#x8FC7;&#x6765;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x9759;&#x6001;&#x90E8;&#x7F72;&#x6587;&#x6863;&#x7684;&#x670D;&#x52A1;&#x5668;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x7684; Node &#x670D;&#x52A1;&#x5668;&#x662F;&#x5206;&#x5F00;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4F60;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x66F4;&#x65B0;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x6B21;&#x90FD;&#x90E8;&#x7F72;&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;-ssr"><a name="&#x4EC0;&#x4E48;&#x662F;-ssr" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;-ssr"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x662F;-ssr" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;-ssr"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15.1. &#x4EC0;&#x4E48;&#x662F; SSR?</h2>
+<ul>
+<li>&#x66F4;&#x597D;&#x7684; SEO</li>
+<li>&#x66F4;&#x9177;&#x7684;&#x611F;&#x89C9;</li>
+</ul>
+<h2 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;"><a name="&#x5FEB;&#x901F;&#x5F00;&#x59CB;" class="plugin-anchor" href="#&#x5FEB;&#x901F;&#x5F00;&#x59CB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5FEB;&#x901F;&#x5F00;&#x59CB;" class="anchor-navigation-ex-anchor" href="#&#x5FEB;&#x901F;&#x5F00;&#x59CB;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15.2. &#x5FEB;&#x901F;&#x5F00;&#x59CB;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x719F;&#x6089; <code>now</code> &#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4ECB;&#x7ECD;&#x5C31;&#x5F88;&#x7B80;&#x5355;&#x4E86;&#x3002;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x5B89;&#x88C5; <code>now</code> &#x548C; <code>docsify-cli</code>&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">npm</span> i now docsify-cli <span class="token parameter variable">-D</span>
+</code></pre>
+<p>&#x7F16;&#x8F91; <code>package.json</code>&#x3002;&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x6587;&#x6863;&#x653E;&#x5728; <code>./docs</code> &#x5B50;&#x76EE;&#x5F55;&#x3002;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my-project&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;docsify start . -c ssr.config.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;deploy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;now -p&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;files&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;docs&quot;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;docsify&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;basePath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://docsify.js.org/&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;loadSidebar&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;loadNavbar&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;coverpage&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;docsify&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>!&gt; &#x5176;&#x4E2D; <code>basePath</code> &#x76F8;&#x5F53;&#x4E8E; webpack &#x7684; <code>publicPath</code> &#xFF0C;&#x4E3A;&#x6587;&#x6863;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x586B;&#x4F60;&#x7684; docsify &#x6587;&#x6863;&#x7F51;&#x7AD9;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x6216;&#x8005;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x9884;&#x89C8;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">npm</span> start
+
+<span class="token comment"># open http://localhost:4000</span>
+</code></pre>
+<p>&#x53D1;&#x5E03;&#xFF01;</p>
+<pre class="language-"><code class="lang-bash">now <span class="token parameter variable">-p</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x7684;&#x6587;&#x6863;&#x7F51;&#x7AD9;&#x4E86;&#x3002;</p>
+<h2 id="&#x5B9A;&#x5236;&#x6A21;&#x677F;"><a name="&#x5B9A;&#x5236;&#x6A21;&#x677F;" class="plugin-anchor" href="#&#x5B9A;&#x5236;&#x6A21;&#x677F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9A;&#x5236;&#x6A21;&#x677F;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x5236;&#x6A21;&#x677F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15.3. &#x5B9A;&#x5236;&#x6A21;&#x677F;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6574;&#x9875;&#x6A21;&#x677F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>docsify<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/docsify/themes/vue.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>vue<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!--inject-app--&gt;</span>
+  <span class="token comment">&lt;!--inject-config--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/docsify/lib/docsify.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x6A21;&#x677F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5360;&#x4F4D;&#x7B26;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6E32;&#x67D3;&#x540E;&#x7684; html &#x548C;&#x914D;&#x7F6E;&#x5185;&#x5BB9;&#x6CE8;&#x5165;&#x5230;&#x9875;&#x9762;&#x4E0A;&#x3002;</p>
+<ul>
+<li><code><span class="token comment">&lt;!--inject-app--&gt;</span></code></li>
+<li><code><span class="token comment">&lt;!--inject-config--&gt;</span></code></li>
+</ul>
+<h2 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15.4. &#x914D;&#x7F6E;</h2>
+<p>&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x5199;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7; <code>--config config.js</code> &#x52A0;&#x8F7D;&#xFF0C;&#x6216;&#x8005;&#x5199;&#x5728; <code>package.json</code> &#x4E2D;&#x3002;</p>
+<p>&#x6E32;&#x67D3;&#x7684;&#x57FA;&#x7840;&#x6A21;&#x7248;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x914D;&#x7F6E;&#x5728; <code>template</code> &#x5C5E;&#x6027;&#x4E0A;&#x3002;</p>
+<pre class="language-"><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token string">&apos;./ssr.html&apos;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">maxAge</span><span class="token operator">:</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token comment">// lru-cache &#x8BBE;&#x7F6E;</span>
+  <span class="token literal-property property">config</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+   <span class="token comment">// docsify &#x8BBE;&#x7F6E;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x66F4;&#x591A;&#x73A9;&#x6CD5;"><a name="&#x66F4;&#x591A;&#x73A9;&#x6CD5;" class="plugin-anchor" href="#&#x66F4;&#x591A;&#x73A9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x66F4;&#x591A;&#x73A9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x591A;&#x73A9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.15.5. &#x66F4;&#x591A;&#x73A9;&#x6CD5;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4F60;&#x7684; Node &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6267;&#x884C; <code>docsify start</code> &#x3002;</p>
+<p><code>docsify start</code> &#x5176;&#x5B9E;&#x662F;&#x4F9D;&#x8D56;&#x4E86; <a href="https://npmarket.surge.sh/?name=docsify-server-renderer" target="_blank"><code>docsify-server-renderer</code></a> &#x6A21;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A; server&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x7F13;&#x5B58;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> Renderer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;docsify-server-renderer&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> readFileSync <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;fs&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>readFileSync
+
+<span class="token comment">// init</span>
+<span class="token keyword">var</span> renderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Renderer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&apos;./docs/index.template.html&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">config</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&apos;docsify&apos;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">repo</span><span class="token operator">:</span> <span class="token string">&apos;docsifyjs/docsify&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+renderer<span class="token punctuation">.</span><span class="token function">renderToString</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">html</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5F53;&#x7136;&#x6587;&#x6863;&#x6587;&#x4EF6;&#x548C; server &#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x5728;&#x4E00;&#x8D77;&#x7684;&#xFF0C;<code>basePath</code> &#x4E0D;&#x662F;&#x4E00;&#x4E2A; URL &#x7684;&#x8BDD;&#x5C31;&#x4F1A;&#x5F53;&#x505A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5904;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x52A0;&#x8F7D;&#x8D44;&#x6E90;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pwa.html" class="navigation navigation-prev " aria-label="Previous page: 离线模式(PWA)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="embed-files.html" class="navigation navigation-next " aria-label="Next page: 文件嵌入">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"服务端渲染 (SSR)","level":"2.1.15","depth":2,"next":{"title":"文件嵌入","level":"2.1.16","depth":2,"path":"docsify/embed-files.md","ref":"docsify/embed-files.md","articles":[]},"previous":{"title":"离线模式(PWA)","level":"2.1.14","depth":2,"path":"docsify/pwa.md","ref":"docsify/pwa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-lunr","-search","advance-blockquote","search-plus","-navigator","anchor-navigation-ex","prism","prism-themes","anchors","ace","emphasize","katex","splitter","chapter-fold","expandable-chapters-small","code","embed-file"],"root":".","styles":{"website":"book.css","ebook":"book-pdf.css","pdf":"book-pdf.css","mobi":"book-pdf.css","epub":"book-pdf.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"asciidoc-include":{"syntax":"asciidoc"},"emphasize":{},"ace":{},"splitter":{},"code":{"copyButtons":true},"embed-file":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"icp":{"label":"","number":"&copy; 晋ICP备19000131号","link":"https://beian.miit.gov.cn/"},"prism-themes":{},"expandable-chapters-small":{},"flexible-alerts":{"style":"flat"},"advance-blockquote":{"danger":{"className":"danger","icon":"fa fa-bolt","label":{"en":"Important","zh":"重要"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"en":"Note","zh":"注意"}},"question":{"className":"question","icon":"fa fa-question-circle-o","label":{"en":"Question","zh":"问题"}},"style":"callout","tag":{"className":"tag","icon":"fa fa-tag ","label":"","labelVisible":"false"},"tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"en":"Tip","zh":"提示"}},"warning":{"className":"warning","icon":"fa fa-warning","label":{"en":"Warning","zh":"警示"}},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Qt","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学习笔记与知识库","language":"zh-hans","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"3.2.3","description":""},"file":{"path":"docsify/ssr.md","mtime":"2025-04-16T12:12:30.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-16T12:13:55.233Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
