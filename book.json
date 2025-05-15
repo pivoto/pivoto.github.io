@@ -1,0 +1,91 @@
+{
+  "title": "学习笔记与知识库",
+  "author": "Qt",
+  "description": "",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "root": ".",
+  "styles": {
+    "website": "book.css",
+    "ebook": "book-pdf.css",
+    "pdf": "book-pdf.css",
+    "mobi": "book-pdf.css",
+    "epub": "book-pdf.css"
+  },
+	"structure": {
+		"readme": "README.md",
+		"summary": "SUMMARY.md"
+	},
+  "links": {
+    "gitbook": false,
+    "sharing": {
+      "google": false,
+      "facebook": false,
+      "twitter": false,
+      "all": false
+    }
+  },
+  "plugins": [
+    "-sharing",
+    "-lunr",
+    "-search",
+    "advance-blockquote",
+    "search-plus",
+    "-navigator",
+    "anchor-navigation-ex",
+    "prism",
+    "prism-themes",
+    "anchors",
+    "ace",
+    "emphasize",
+    "katex",
+    "splitter",
+    "chapter-fold",
+    "expandable-chapters-small",
+    "code",
+    "embed-file"
+  ],
+  "pluginsConfig": {
+    "asciidoc-include": {
+      "syntax": "asciidoc"
+    },
+    "flexible-alerts": {
+      "style": "flat"
+    },
+    "advance-blockquote": {
+      "style": "callout",
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+    },
+    "embed-file": {
+    },
+    "icp": {
+      "label": "",
+      "number": "&copy; 晋ICP备19000131号",
+      "link": "https://beian.miit.gov.cn/"
+    },
+    "theme-default": {
+      "showLevel": true
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+      ]
+    },
+    "anchor-navigation-ex": {
+      "multipleH1": false
+    },
+    "sectionx": {
+      "tag": "b"
+    }
+  },
+  "pdf": {
+    "toc": true,
+    "pageNumbers": true,
+    "fontSize": 16,
+    "paperSize": "a4"
+  }
+}
